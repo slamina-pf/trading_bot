@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from endpoints import trading
+from app.endpoints import trading
 
 app = FastAPI()
 
