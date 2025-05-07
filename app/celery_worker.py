@@ -11,8 +11,8 @@ celery_app.autodiscover_tasks(["app.tasks.trading"])
 
 celery_app.conf.beat_schedule = {
     'run-trading-task-every-5-minutes': {
-        'task': 'app.tasks.trading.trading_task',
-        'schedule': crontab(minute='*/1'), 
+        'task': 'app.tasks.trading.random_forest_5m_task',
+        'schedule': crontab(minute='*/5'), 
     },
 }
 

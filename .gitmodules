@@ -1,0 +1,6 @@
+[submodule "shared"]
+	path = shared
+	url = https://github.com/slamina-pf/shared_ml_dl.git
+[submodule "app/shared"]
+	path = app/shared
+	url = https://github.com/slamina-pf/shared_ml_dl.git

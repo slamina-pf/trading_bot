@@ -3,7 +3,7 @@ from app.helpers.connections import redis_server
 
 router = APIRouter()
 
-@router.get("/bot-activate")
+@router.get("/random_forest_5m/activate")
 def get_users():
-    redis_server.set('bot_active', 'true')
+    redis_server.set('random_forest_5m', 'true')
     return {"message": "Trading bot started"}
