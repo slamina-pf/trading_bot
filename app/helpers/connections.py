@@ -1,6 +1,6 @@
 import redis
 import ccxt
-from helpers.constants import API_KEY, SECRET
+from app.helpers.constants import API_KEY, SECRET
 
 BINANCE_NORMAL_CONNECTION = ccxt.binance()
 
