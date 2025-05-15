@@ -5,13 +5,12 @@ class FeatureSelection:
 
     def select_features(self, df):
         features = ["sma_200", "rsi", "macd_histogram", "macd_signal"]
-        X = df[features]
-        Y = df["label"]
+        selected_features = df[features]
 
-        return X, Y
+        return selected_features
     
 
     def run(self, df):
-        X, Y = self.select_features(df)
+        selected_features = self.select_features(df)
 
-        return X, Y
+        return selected_features

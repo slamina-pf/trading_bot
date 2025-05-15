@@ -41,7 +41,6 @@ class DataCleaning:
         return df
 
     def run(self, df):
-        df["timestamp"] = pd.to_datetime(df["timestamp"], unit='ms')
 
         df = self.dropna(df)
         df = self.drop_duplicates(df)

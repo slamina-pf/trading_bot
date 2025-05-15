@@ -13,7 +13,7 @@ def random_forest_5m_task():
     data_collector = DataCollector(
         symbol="BTC/USDT",
         timeframe="5m",
-        limit=1000
+        limit=200
     )
 
     data_cleaning = DataCleaning()
