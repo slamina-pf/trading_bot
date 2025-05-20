@@ -24,8 +24,12 @@ services:
     container_name: celery_worker
     depends_on:
       - redis
-    volumes:
-      - .:/app
+    develop:
+      watch:
+        - action: sync
+          path: ./helpers
+          target: /app/helpers
+
     command: celery -A app.celery_worker worker --loglevel=info
 
   celery_beat:

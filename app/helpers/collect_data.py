@@ -19,12 +19,12 @@ class DataCollector:
 
     def collect_data(self):
 
-        data = BINANCE_NORMAL_CONNECTION.fetch_ohlcv(self.symbol, self.timeframe, self.limit)
+        data = BINANCE_NORMAL_CONNECTION.fetch_ohlcv(self.symbol, self.timeframe, limit=self.limit)
         df = pd.DataFrame(data, columns=["timestamp", "open", "high", "low", "close", "volume"])
         df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
         return df
     
     def run(self):
         df = self.collect_data()
-
+        print("Data collected: ", df.describe())
         return df
